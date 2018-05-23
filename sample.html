@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" >
+
+<head>
+    <meta charset="UTF-8">
+    <title>SMW</title>
+    <link rel="stylesheet" href="component.css" type="text/css">
+</head>
+
+<body>
+
+    <modal-window id="modal1" header="Первое окно" content="Кубинский щелезуб. А окно умеет закрытся по эскейпу и крестику и ещё есть обработчик нажатия на зеленую кнопку. В консоли там чото происходит, да." esc cross>
+    </modal-window>
+    <modal-window id="modal2" header="Второе окно" content="Гаитянский щелезуб. А у окна нет ничего. Увы">
+    </modal-window>
+    <button id = "button1">Butt on</button>
+    <button id = "button2">Butt on2</button>
+    <button id = "button3" style="z-index : 5">close button</button>
+    <br><br>
+    <script>
+        window.onload = function() {
+            const window1 = document.querySelector('#modal1');
+            const window2 = document.querySelector('#modal2');
+            document.querySelector('#button1').addEventListener('click', function () {
+                window1.show();
+            });
+            document.querySelector('#button2').addEventListener('click', function () {
+                window2.show();
+            });
+            document.querySelector('#button3').addEventListener('click', function () {
+                window2.close();
+            });
+            window1.addAceptEventListener('click', ()=>{console.log('wowo')});
+        }
+    </script>
+    <script src="component.js"></script>
+</body>
+</html>
+ 
