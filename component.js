@@ -38,7 +38,7 @@ class ModalWindow extends HTMLElement {
 
     }
 
-    addAceptEventListener(event, handler){
+    addAcceptEventListener(event, handler){
         this.shadowRoot.querySelector('.accept').addEventListener(event, handler);
 
     }
